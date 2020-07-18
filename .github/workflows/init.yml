@@ -27,3 +27,5 @@ jobs:
     - name: Generate project
       run: dotnet new webapi --name ${{ github.event.repository.name }}
     
+    - name: Git Commit/Push Changes
+      uses: actions-x/commit@v1
