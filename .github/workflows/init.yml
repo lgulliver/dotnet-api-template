@@ -28,6 +28,9 @@ jobs:
     
     - name: Generate project
       run: dotnet new webapi --name ${{ github.event.repository.name }}
+     
+    - name: Generate test project
+      run: dotnet new xunit --name ${{ github.event.repository.name }}.UnitTests
     
     - name: Git Commit/Push Changes
       uses: actions-x/commit@v1
