@@ -31,5 +31,5 @@ jobs:
     - name: Generate test project
       run: dotnet new xunit --name ${{ github.event.repository.name }}.UnitTests
     
-    - name: Git Commit/Push Changes
-      uses: actions-x/commit@v1
+    - name: Git Commit Push Action
+      uses: GuillaumeFalourd/git-commit-push@v1.3
