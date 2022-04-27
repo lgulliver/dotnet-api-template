@@ -21,10 +21,9 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Setup .NET Core SDK
-      uses: actions/setup-dotnet@v1.8.0
-      with:
-        # Optional SDK version to use. If not provided, will install global.json version when available. Examples: 2.2.104, 3.1, 3.1.x
-        dotnet-version: 5.0.x
+      uses: actions/setup-dotnet@v2.0.0
+      with:        
+        dotnet-version: 6.0.x
     
     - name: Generate project
       run: dotnet new webapi --name ${{ github.event.repository.name }}
